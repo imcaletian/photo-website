@@ -23,11 +23,13 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body className={`${raleway.className}`}>
-        <div className='flex flex-col md:flex-row md:justify-between items-center my-8 md:m-8 lg:mx-12'>
-        <div className='text-center md:text-left'>
+        <div className='flex flex-col md:flex-row md:justify-between items-center my-8 md:m-8 lg:mx-12 select-none'>
+        <Link href='/'>
+        <div className='text-center md:text-left '>
         <h1 className={`text-3xl font-normal text-orange-600 mb-1 ${abril.className}`}>Cale Tian Photography</h1> 
         <p className='text-sm font-light'>Vancouver Portrait & Event Photographer</p>
         </div>
+        </Link>
         <nav className='pt-5 md:py-4'>
           <ul className='flex flex-col md:flex-row gap-4 text-center'>
               <li>

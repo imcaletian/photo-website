@@ -1,4 +1,4 @@
-import supabase from "@/pages/utils/supabase"
+import supabase from "@/utils/supabase"
 import Image from "next/image"
 
 export default async function PhotoDisplay ({photo}) {

@@ -1,5 +1,5 @@
 import GalleryItem from "./components/GalleryItem"
-import supabase from "@/pages/utils/supabase"
+import supabase from "@/utils/supabase"
 
 export default async function Gallery () {
 
