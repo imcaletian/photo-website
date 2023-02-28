@@ -39,12 +39,14 @@ export default function PhotoCarosel ({photo}) {
     const url = `https://eflfzmunuftpbpfuukxf.supabase.co/storage/v1/object/public/public/${photo}/`
 
   return (
-    <Slider {...settings} className="hidden lg:block">
+    <div className="hidden lg:block">
+    <Slider {...settings} >
           {photos.map((file)=> 
               <div key={file.id}>
               <Image src={`${url}/${file.name}`}height={600}width={600} key={file.id} className="h-[20rem] md:h-[30rem] object-cover w-full" />
               </div>)
           }
     </Slider>
+    </div>
   );
   }
