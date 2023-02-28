@@ -1,6 +1,9 @@
 import './globals.css'
+
 import Link from 'next/link'
 import { Raleway, Abril_Fatface} from '@next/font/google'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const raleway = Raleway({
   subsets: ['latin'],
@@ -36,7 +39,7 @@ export default function RootLayout({ children }) {
               <Link href="/" className='hover:text-orange-400 transition-colors'>Portfolio</Link>
               </li>
               <li>
-              <Link href="/" className='hover:text-orange-400 transition-colors'>Contact Me</Link>
+              <Link href="/contact" className='hover:text-orange-400 transition-colors'>Contact Me</Link>
               </li>
               <li>
               <Link href="/" className='hover:text-orange-400 transition-colors'>About</Link>

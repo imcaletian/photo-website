@@ -15,7 +15,7 @@ export default async function PhotoDisplay ({photo}) {
     const url = `https://eflfzmunuftpbpfuukxf.supabase.co/storage/v1/object/public/public/${photo}/`
     return (
         <div>
-            <div className="grid grid-cols-fluid">
+            <div className="grid grid-cols-fluid lg:hidden">
             {data.map((file)=> 
             <Image src={`${url}/${file.name}`}
             height={600}
