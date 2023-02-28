@@ -28,26 +28,21 @@ export default function PhotoCarosel ({photo}) {
     }, [])
 
     const settings = {
-      className: "slider variable-width hidden lg:block ",
+      className: "slider variable-width",
       infinite: true,
       centerMode: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      variableWidth: true,
-      responsive: [{
-        breakpoint: 700,
-        vertical: true,
-        verticalSwiping: true,  
-      }]
+      variableWidth: true
     };
 
     const url = `https://eflfzmunuftpbpfuukxf.supabase.co/storage/v1/object/public/public/${photo}/`
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className="hidden lg:block">
           {photos.map((file)=> 
               <div key={file.id}>
-              <Image src={`${url}/${file.name}`}height={600}width={600} key={file.id} className="h-[20rem] md:h-[35rem] object-cover w-full" />
+              <Image src={`${url}/${file.name}`}height={600}width={600} key={file.id} className="h-[20rem] md:h-[30rem] object-cover w-full" />
               </div>)
           }
     </Slider>
