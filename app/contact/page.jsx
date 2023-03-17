@@ -29,7 +29,6 @@ export default function Contact () {
             setEmail('')
             setMessage('')
             router.push('/')
-            
         } catch (error) {
             console.error("err", error)
         }
