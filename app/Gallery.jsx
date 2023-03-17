@@ -1,6 +1,8 @@
 import GalleryItem from "./components/GalleryItem"
 import supabase from "@/utils/supabase"
 
+export const revalidate = 60; 
+
 export default async function Gallery () {
 
     const { data, error } = await supabase

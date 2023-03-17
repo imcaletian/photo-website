@@ -3,7 +3,6 @@ import Image from "next/image";
 import PhotoCarosel from "./PhotoCarosel";
 import PhotoDisplay from "./PhotoDisplay";
 
-export const revalidate = 60; 
 
 export default async function ({params}) {
     const { photo } = params
