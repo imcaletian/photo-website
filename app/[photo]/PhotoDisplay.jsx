@@ -2,7 +2,6 @@ import supabase from "@/utils/supabase"
 import Image from "next/image"
 
 export default async function PhotoDisplay ({photo}) {
-    console.log(photo)
     const {data, error} = await supabase
     .storage
     .from('public')
