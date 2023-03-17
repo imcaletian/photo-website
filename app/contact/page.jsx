@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { useState } from "react"
-
+import { toast, Toaster} from "react-hot-toast"
 
 export default function Contact () {
     const [name, setName] = useState ('')
@@ -25,17 +25,21 @@ export default function Contact () {
                     'content-type': 'application/json'
                 }
             })
+            toast.success('Submission Succeeded! I Will Be In Touch ASAP!')
             setName('')
             setEmail('')
             setMessage('')
             router.push('/')
         } catch (error) {
             console.error("err", error)
+            toast.error("Submission Failed, Please Try Again Later")
         }
 
     }
 
     return (
+        <>
+        <div><Toaster /></div>
         <div className="bg-orange-700 flex h-[34rem] md:h-[36rem] my-8" >
             <div className="md:w-1/2 lg:w-[40%] mx-auto">
                 <div className="p-8 mb-3 text-center">
@@ -61,5 +65,6 @@ export default function Contact () {
                 />
             </div>
         </div>
+        </>
     )
 }
