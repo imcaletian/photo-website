@@ -1,7 +1,7 @@
 import './globals.css'
 
 import Link from 'next/link'
-import { Raleway, Abril_Fatface} from '@next/font/google'
+import { Raleway, Abril_Fatface, Lobster, Lobster_Two, Pacifico} from '@next/font/google'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -14,6 +14,12 @@ const abril = Abril_Fatface({
   subsets: ['latin'],
   variable: "--font-abril",
   weight: ["400"]
+})
+
+const lobster = Pacifico({
+  subsets: ['latin'],
+  variable: '--font-lobster_two',
+  weight: ['400']
 })
 
 export default function RootLayout({ children }) {
@@ -29,8 +35,8 @@ export default function RootLayout({ children }) {
         <div className='flex flex-col md:flex-row md:justify-between items-center my-8 md:m-8 lg:mx-12 select-none'>
         <Link href='/'>
         <div className='text-center md:text-left '>
-        <h1 className={`text-3xl font-normal text-orange-600 mb-1 ${abril.className}`}>Cale Tian Photography</h1> 
-        <p className='text-sm font-light'>Vancouver Portrait & Event Photographer</p>
+        <h1 className={`text-4xl text-orange-600 pb-2 font-bold ${lobster.className}`}>Cale Tian Photography</h1> 
+        <p className='text-sm font-light ml-1'>Vancouver Portrait & Event Photographer</p>
         </div>
         </Link>
         <nav className='pt-5 md:py-4'>
@@ -65,7 +71,9 @@ export default function RootLayout({ children }) {
           </div>
           <div>
             <h2 className='font-semibold text-lg mb-2'>Location</h2>
+            <p>268 Keefer St, Suite 303</p>
             <p>Vancouver, BC</p>
+            <p>V6A 1X5</p>
           </div>
         </div>
       </body>

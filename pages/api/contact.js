@@ -13,7 +13,7 @@ const client = mailgun.client({username: 'api', key: API_KEY})
 const { name, email, message } = req.body
 
 const messageData = {
-  from: 'Contact Form Update<contact@msg.caletian.com>',
+  from: 'Contact Form Update<contact@sandbox42fbbb562472456cb39c59b5ca9b76cb.mailgun.org>',
   to: 'cale@caletian.com',
   subject: `New Contact Form from ${name}!`,
   text: `
